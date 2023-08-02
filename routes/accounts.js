@@ -9,13 +9,17 @@ router.post('/', async (req, res, next) => {
   try {
     let account = req.body;
 
-    if(!account.name || !account.balance) {
-      throw new Error("Formato invalido")
+    if(!account.name || !account.balance == null) {
+      throw new Error("Formato invalido, name e balance obrigatorios")
     }
 
     const data = JSON.parse(await readFile(global.fileName));
 
-    account = { id: data.nextId++, ...account };
+    account = { 
+            id: data.nextId++, 
+            name: account.name,
+            balance: account.balance
+          };
     data.accounts.push(account);
 
     await writeFile(global.fileName, JSON.stringify(data));
@@ -58,7 +62,7 @@ router.delete('/:id', async (req, res, next) => {
     data.accounts = data.accounts.filter(
       account => account.id !== parseInt(req.params.id)
     );
-    await writeFile(global.fileName, JSON.stringify(data));(data, null, 2);
+    await writeFile(global.fileName, JSON.stringify((data, null, 2)));
     logger.info(`DELETE /account/:id - ${req.params.id}`);
     res.end();
   } catch (err) {
@@ -69,11 +73,20 @@ router.delete('/:id', async (req, res, next) => {
 router.put('/', async (req, res, next) => {
   try{
       let account = req.body
+
+      if(!account.name || !account.balance == null) {
+        throw new Error("Formato invalido, name e balance obrigatorios")
+      }
       const data = JSON.parse(await readFile(Dlobal.fileName));
       const index = data.accounts.findIndex(item => item.id === account.id);
-      data.accounts[index] = account;
 
-      await writeFile(global.fileName, JSON.stringify(data));
+      if(index === -1) throw new Error("Registro não encontrado");
+
+
+      data.accounts[index].name = account.name;
+      data.accounts[index].balance = account.balance;
+
+      await writeFile(global.fileName, JSON.stringify((data, null, 2)));
       logger.info(`PUT /account - ${JSON.stringify(account)}`);
       res.send(account);
   } catch (err) {
@@ -84,8 +97,16 @@ router.put('/', async (req, res, next) => {
 router.patch("/updateBalance", async (req, res, next) => {
   try{
     let account = req.body
+
+    if(!account.id || !account.balance == null) {
+      throw new Error("Formato invalido, name e balance obrigatorios")
+    }
+
     const data = JSON.parse(await readFile(global.fileName));
     const index = data.accounts.findIndex(item => item.id === account.id);
+
+    if(index === -1) throw new Error("Registro não encontrado");
+
     data.accounts[index].balance = account.balance;
 
     await writeFile(global.fileName, JSON.stringify(data));

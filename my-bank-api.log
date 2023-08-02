@@ -59,3 +59,41 @@
 2023-08-01T22:38:30.602Z [my-bank-api] info: API started read
 2023-08-01T22:38:33.339Z [my-bank-api] info: API started read
 2023-08-01T22:38:36.632Z [my-bank-api] info: API started read
+2023-08-02T17:47:14.128Z [my-bank-api] info: API started read
+2023-08-02T17:51:30.241Z [my-bank-api] info: API started read
+2023-08-02T17:51:43.037Z [my-bank-api] error: POST /account - Formato invalido, name e balance obrigatorios
+2023-08-02T17:51:49.189Z [my-bank-api] error: POST /account - Formato invalido, name e balance obrigatorios
+2023-08-02T17:55:35.104Z [my-bank-api] info: API started read
+2023-08-02T17:55:55.992Z [my-bank-api] info: POST /account - {"id":2,"name":"alexandre Alves","balance":0}
+2023-08-02T17:56:41.189Z [my-bank-api] info: API started read
+2023-08-02T17:56:47.265Z [my-bank-api] info: API started read
+2023-08-02T17:56:49.781Z [my-bank-api] info: API started read
+2023-08-02T17:56:55.810Z [my-bank-api] info: API started read
+2023-08-02T17:56:57.818Z [my-bank-api] info: API started read
+2023-08-02T17:57:01.405Z [my-bank-api] info: API started read
+2023-08-02T17:57:02.738Z [my-bank-api] info: API started read
+2023-08-02T17:57:04.876Z [my-bank-api] info: API started read
+2023-08-02T17:57:08.512Z [my-bank-api] info: API started read
+2023-08-02T18:01:26.512Z [my-bank-api] info: API started read
+2023-08-02T18:01:30.089Z [my-bank-api] info: API started read
+2023-08-02T18:01:35.006Z [my-bank-api] info: API started read
+2023-08-02T18:02:15.888Z [my-bank-api] info: API started read
+2023-08-02T18:02:19.987Z [my-bank-api] info: API started read
+2023-08-02T18:02:22.155Z [my-bank-api] info: API started read
+2023-08-02T18:02:26.625Z [my-bank-api] info: API started read
+2023-08-02T18:02:32.807Z [my-bank-api] info: API started read
+2023-08-02T18:02:42.823Z [my-bank-api] info: API started read
+2023-08-02T18:04:27.770Z [my-bank-api] info: API started read
+2023-08-02T18:04:54.341Z [my-bank-api] info: API started read
+2023-08-02T18:05:42.108Z [my-bank-api] info: API started read
+2023-08-02T18:05:43.126Z [my-bank-api] info: API started read
+2023-08-02T18:05:48.758Z [my-bank-api] info: API started read
+2023-08-02T18:05:51.881Z [my-bank-api] info: API started read
+2023-08-02T18:05:57.692Z [my-bank-api] info: API started read
+2023-08-02T18:06:02.361Z [my-bank-api] info: API started read
+2023-08-02T18:06:20.999Z [my-bank-api] info: GET /account 
+2023-08-02T18:14:11.590Z [my-bank-api] info: API started read
+2023-08-02T18:14:12.856Z [my-bank-api] info: API started read
+2023-08-02T18:14:37.340Z [my-bank-api] info: API started read
+2023-08-02T18:15:08.766Z [my-bank-api] info: API started read
+2023-08-02T18:15:22.775Z [my-bank-api] info: API started read
